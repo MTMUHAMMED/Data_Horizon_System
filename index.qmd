@@ -2,7 +2,7 @@
 title: "Data Horizon System"
 subtitle: "M.T.M. Buddy System Motivation"
 author: Muhammed Tahir Muhammed
-theme: darkly
+theme: morph
 ---
 
 ```{r setup, include=FALSE}
