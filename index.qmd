@@ -1,0 +1,58 @@
+---
+title: "First page"
+author: M.T.Muhammed
+theme: yeti
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+if(!require(pacman)) install.packages("pacman")
+```
+
+# General Social Survey (GSS) data Analysis
+
+Loading the necessary packages using package manager (pacman)
+
+```{r}
+pacman::p_load(tidyverse, plotly, dslabs, esquisse)
+```
+
+:::{.panel-tabset}
+## Section one
+
+### The GSS dataset
+
+loading the general social survey dataset
+
+```{r}
+gss_cat
+```
+
+## Section two
+
+### The mean age of the marital categories
+
+Under this, we use the 'verbs' "group_by" and "summarize" from the "dplyr" package.
+
+```{r}
+mean_age_by_marital_group <- gss_cat |> group_by(marital) |> 
+  summarise(mean_age = round(mean(age, na.rm = TRUE),1))
+mean_age_by_marital_group
+```
+
+## Section three
+
+### Visualization of the marital group mean age
+
+```{r}
+Mean_age <- mean_age_by_marital_group |> ggplot() + aes(x=marital, y=mean_age)+
+  geom_col(aes(fill = marital)) +
+  labs(
+    x = "Marital Status of the Women",
+    y = "Mean Age (year)",
+    title = "Bar Chart Showing the mean age by marital Status of Women"
+  )
+ggplotly(Mean_age)
+```
+
+:::{.panel-tabset}
