@@ -12,28 +12,30 @@ if(!require(pacman)) install.packages("pacman")
 
 # General Social Survey (GSS) data Analysis
 
-Loading the necessary packages using package manager (pacman)
+Loading the necessary packages using package manager (pacman). Pacman plays an important role in loading packages into the library. It major due is to avoid double installation of a given package.
 
 ```{r}
 pacman::p_load(tidyverse, plotly, dslabs, esquisse, reactable)
 ```
 
+The packages above play inportant roles in this analysis. Esquisse via an esquisser enables one to manually create visualization using point and click approach. Plotly enables us to interact with our charts by hovering through.
 :::{.panel-tabset}
-## Section one
+## The Dataset
 
 ### The GSS dataset
 
-loading the general social survey dataset
+Loading the general social survey (gss) dataset into R.
 
 ```{r}
 reactable(gss_cat)
 ```
+The table above displays the categorical variables in the gss survey.
 
-## Section two
+## Mean Age Summary
 
 ### The mean age of the marital categories
 
-Under this, we use the 'verbs' "group_by" and "summarize" from the "dplyr" package.
+Under this, we use the 'verbs' "group_by" and "summarize" from the "dplyr" package embedded in the tidyverse package.
 
 ```{r}
 mean_age_by_marital_group <- gss_cat |> group_by(marital) |> 
@@ -41,7 +43,7 @@ mean_age_by_marital_group <- gss_cat |> group_by(marital) |>
 mean_age_by_marital_group
 ```
 
-## Section three
+## Visualization (Chart)
 
 ### Visualization of the marital group mean age
 
@@ -55,5 +57,5 @@ Mean_age <- mean_age_by_marital_group |> ggplot() + aes(x=marital, y=mean_age)+
   )
 ggplotly(Mean_age)
 ```
-
+Thanks for read. You can contact me via [here](https://wa.me/2348167631640?text=Hello!%20I%20am%20a%20Statistics%20and%20Data%20Science%20lecturer%20with%20a%20track%20record%20of%20successfully%20teaching%20and%20mentoring%20students%20on%20data%20analytics%20and%20visualization.%20%0ALet's%20discuss%20the%20way%20forward%20to%20make%20you%20a%20guru%20in%20data%20analytics.){target="_blank"} to teach and mentor you at an affordable price.
 :::{.panel-tabset}
