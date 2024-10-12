@@ -57,5 +57,5 @@ Mean_age <- mean_age_by_marital_group |> ggplot() + aes(x=marital, y=mean_age)+
   )
 ggplotly(Mean_age)
 ```
-Thanks for read. You can contact me via [here](https://wa.me/2348167631640?text=Hello!%20I%20am%20a%20Statistics%20and%20Data%20Science%20lecturer%20with%20a%20track%20record%20of%20successfully%20teaching%20and%20mentoring%20students%20on%20data%20analytics%20and%20visualization.%20%0ALet's%20discuss%20the%20way%20forward%20to%20make%20you%20a%20guru%20in%20data%20analytics.){target="_blank"} to teach and mentor you at an affordable price.
+Thanks for reading. You can contact me via [here](https://wa.me/2348167631640?text=Hello!%20I%20am%20a%20Statistics%20and%20Data%20Science%20lecturer%20with%20a%20track%20record%20of%20successfully%20teaching%20and%20mentoring%20students%20on%20data%20analytics%20and%20visualization.%20%0ALet's%20discuss%20the%20way%20forward%20to%20make%20you%20a%20guru%20in%20data%20analytics.){target="_blank"} to teach and mentor you at an affordable price.
 :::{.panel-tabset}
