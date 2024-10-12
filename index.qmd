@@ -40,7 +40,7 @@ Under this, we use the 'verbs' "group_by" and "summarize" from the "dplyr" packa
 ```{r}
 mean_age_by_marital_group <- gss_cat |> group_by(marital) |> 
   summarise(mean_age = round(mean(age, na.rm = TRUE),1))
-mean_age_by_marital_group
+reactable(mean_age_by_marital_group)
 ```
 
 ## Visualization (Chart)
