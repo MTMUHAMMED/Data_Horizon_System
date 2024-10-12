@@ -1,5 +1,5 @@
 ---
-title: "First page"
+title: "Data Horizon System"
 author: M.T.Muhammed
 theme: yeti
 ---
